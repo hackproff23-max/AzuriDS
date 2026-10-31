@@ -2973,7 +2973,7 @@
     if-nez v2, :cond_1c
 
     :goto_15
-    sget-object v2, Lcom/dsemu/drastic/DraSticActivity$u;->i:Lcom/dsemu/drastic/DraSticActivity$u;
+    sget-object v2, Lcom/dsemu/drastic/DraSticActivity$u;->m:Lcom/dsemu/drastic/DraSticActivity$u;
 
     goto/16 :goto_f
 

@@ -457,7 +457,7 @@
 
     invoke-direct {v1, v2}, Lh0/c;-><init>(Ljava/io/File;)V
 
-    const-string v2, "DraStic"
+    const-string v2, "AzuriDS"
 
     invoke-direct {v0, v1, v2}, Lh0/b;-><init>(Lh0/c;Ljava/lang/String;)V
 
@@ -465,25 +465,30 @@
 .end method
 
 .method public static f(Landroid/content/Context;)Lh0/b;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Landroid/content/ContextWrapper;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v1
+
+    :cond_0
     new-instance p0, Lh0/b;
 
-    new-instance v1, Lh0/c;
+    new-instance v2, Lh0/c;
 
-    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
+    invoke-direct {v2, v1}, Lh0/c;-><init>(Ljava/io/File;)V
 
-    move-result-object v0
+    const-string v0, "AzuriDS"
 
-    invoke-direct {v1, v0}, Lh0/c;-><init>(Ljava/io/File;)V
-
-    const-string v0, "DraStic"
-
-    invoke-direct {p0, v1, v0}, Lh0/b;-><init>(Lh0/c;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v0}, Lh0/b;-><init>(Lh0/c;Ljava/lang/String;)V
 
     return-object p0
 .end method
