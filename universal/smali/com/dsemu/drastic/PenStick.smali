@@ -724,7 +724,15 @@
     return-void
 .end method
 
-# tick: move o ponto; segurar parado >300ms encosta a caneta (arrasta); toque rapido = clique
+.method public isPressed()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    return v0
+.end method
+
+# tick: move o cursor; segurar o centro parado >2s (0x7d0) encosta a caneta (arrasta); toque rapido (<300ms) = clique
 .method public tick()V
     .locals 10
 
@@ -809,7 +817,7 @@
 
     sub-long/2addr v6, v8
 
-    const-wide/16 v8, 0x12c
+    const-wide/16 v8, 0x7d0
 
     cmp-long v5, v6, v8
 
