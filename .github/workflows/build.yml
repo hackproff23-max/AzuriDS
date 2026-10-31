@@ -15,6 +15,9 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Aplicar patch (dpad oculto + caneta)
+        run: sh aplicar_pen.sh
+
       - name: Baixar apktool
         run: curl -L -o apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar
 
