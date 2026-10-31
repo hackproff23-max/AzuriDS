@@ -5562,6 +5562,8 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
     .annotation build Landroid/annotation/SuppressLint;
+    invoke-static {p0}, Lcom/dsemu/drastic/ui/AnalogStick;->scheduleEditor(Landroid/app/Activity;)V
+
         value = {
             "NewApi"
         }
