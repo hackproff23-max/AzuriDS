@@ -6,7 +6,21 @@
 # instance fields
 .field private mBase:Landroid/graphics/Paint;
 
+.field private mDot:Landroid/view/View;
+
 .field private mDown:Z
+
+.field private mMoved:Z
+
+.field private mPressed:Z
+
+.field private mSX:F
+
+.field private mSY:F
+
+.field private mT0:J
+
+.field private mTap:I
 
 .field private mDx:F
 
@@ -121,11 +135,25 @@
 .end method
 
 .method public static attach(Landroid/app/Activity;Lcom/dsemu/drastic/DraSticGlView;)V
-    .locals 6
+    .locals 8
 
     new-instance v0, Lcom/dsemu/drastic/PenStick;
 
     invoke-direct {v0, p0, p1}, Lcom/dsemu/drastic/PenStick;-><init>(Landroid/content/Context;Lcom/dsemu/drastic/DraSticGlView;)V
+
+    new-instance v6, Lcom/dsemu/drastic/PenDot;
+
+    invoke-direct {v6, p0, v0}, Lcom/dsemu/drastic/PenDot;-><init>(Landroid/content/Context;Lcom/dsemu/drastic/PenStick;)V
+
+    iput-object v6, v0, Lcom/dsemu/drastic/PenStick;->mDot:Landroid/view/View;
+
+    new-instance v7, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v7, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v6, v7}, Landroid/app/Activity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     const v1, 0x3f19999a    # 0.6f
 
@@ -381,7 +409,7 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 6
+    .locals 9
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -404,13 +432,41 @@
     goto :cond_ret
 
     :cond_down
+    iget v1, p0, Lcom/dsemu/drastic/PenStick;->mTap:I
+
+    if-lez v1, :cond_nt
+
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->ni()Ln0/i;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_z
+
+    invoke-virtual {v2}, Ln0/i;->penUp()V
+
+    :cond_z
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/dsemu/drastic/PenStick;->mTap:I
+
+    :cond_nt
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mDown:Z
 
-    invoke-direct {p0, p1}, Lcom/dsemu/drastic/PenStick;->track(Landroid/view/MotionEvent;)V
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->push()V
+    iput-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    iput-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mMoved:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    iput-wide v4, p0, Lcom/dsemu/drastic/PenStick;->mT0:J
+
+    invoke-direct {p0, p1}, Lcom/dsemu/drastic/PenStick;->track(Landroid/view/MotionEvent;)V
 
     iget-object v2, p0, Lcom/dsemu/drastic/PenStick;->mHandler:Landroid/os/Handler;
 
@@ -446,15 +502,61 @@
 
     iput v1, p0, Lcom/dsemu/drastic/PenStick;->mDy:F
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    iget-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    if-eqz v1, :cond_nopress
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
 
     invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->ni()Ln0/i;
 
     move-result-object v2
 
-    if-eqz v2, :cond_ret
+    if-eqz v2, :cond_fin
 
     invoke-virtual {v2}, Ln0/i;->penUp()V
+
+    goto :cond_fin
+
+    :cond_nopress
+    iget-boolean v1, p0, Lcom/dsemu/drastic/PenStick;->mMoved:Z
+
+    if-nez v1, :cond_fin
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    iget-wide v6, p0, Lcom/dsemu/drastic/PenStick;->mT0:J
+
+    sub-long/2addr v4, v6
+
+    const-wide/16 v6, 0x12c
+
+    cmp-long v1, v4, v6
+
+    if-gez v1, :cond_fin
+
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->push()V
+
+    const/4 v1, 0x5
+
+    iput v1, p0, Lcom/dsemu/drastic/PenStick;->mTap:I
+
+    iget-object v2, p0, Lcom/dsemu/drastic/PenStick;->mHandler:Landroid/os/Handler;
+
+    iget-object v3, p0, Lcom/dsemu/drastic/PenStick;->mTick:Ljava/lang/Runnable;
+
+    const-wide/16 v4, 0x10
+
+    invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_fin
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->refreshDot()V
 
     :cond_ret
     const/4 v0, 0x1
@@ -462,20 +564,202 @@
     return v0
 .end method
 
+.method private refreshDot()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/dsemu/drastic/PenStick;->mDot:Landroid/view/View;
+
+    if-eqz v0, :cond_ret
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_ret
+    return-void
+.end method
+
+.method public getSX()F
+    .locals 1
+
+    iget v0, p0, Lcom/dsemu/drastic/PenStick;->mSX:F
+
+    return v0
+.end method
+
+.method public getSY()F
+    .locals 1
+
+    iget v0, p0, Lcom/dsemu/drastic/PenStick;->mSY:F
+
+    return v0
+.end method
+
+# posicao do pontinho em pixels, dentro do retangulo da tela touch
+.method public calc()V
+    .locals 9
+
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->ni()Ln0/i;
+
+    move-result-object v0
+
+    if-nez v0, :cond_ok
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    iput v1, p0, Lcom/dsemu/drastic/PenStick;->mSX:F
+
+    iput v1, p0, Lcom/dsemu/drastic/PenStick;->mSY:F
+
+    return-void
+
+    :cond_ok
+    iget v1, v0, Ln0/i;->I:I
+
+    int-to-float v1, v1
+
+    iget v2, v0, Ln0/i;->J:I
+
+    int-to-float v2, v2
+
+    iget v3, v0, Ln0/i;->width:I
+
+    int-to-float v3, v3
+
+    iget v4, v0, Ln0/i;->height:I
+
+    int-to-float v4, v4
+
+    invoke-virtual {v0}, Ln0/i;->penOrient()I
+
+    move-result v5
+
+    iget v6, p0, Lcom/dsemu/drastic/PenStick;->mPx:F
+
+    iget v7, p0, Lcom/dsemu/drastic/PenStick;->mPy:F
+
+    const/4 v8, 0x5
+
+    if-ne v5, v8, :cond_n6
+
+    mul-float/2addr v7, v3
+
+    const/high16 v0, 0x43400000    # 192.0f
+
+    div-float/2addr v7, v0
+
+    add-float/2addr v7, v1
+
+    move v8, v7
+
+    const/high16 v0, 0x43800000    # 256.0f
+
+    sub-float/2addr v0, v6
+
+    mul-float/2addr v0, v4
+
+    const/high16 v6, 0x43800000    # 256.0f
+
+    div-float/2addr v0, v6
+
+    add-float/2addr v0, v2
+
+    goto :cond_set
+
+    :cond_n6
+    const/4 v8, 0x6
+
+    if-ne v5, v8, :cond_n0
+
+    const/high16 v0, 0x43400000    # 192.0f
+
+    sub-float/2addr v0, v7
+
+    mul-float/2addr v0, v3
+
+    const/high16 v7, 0x43400000    # 192.0f
+
+    div-float/2addr v0, v7
+
+    add-float/2addr v0, v1
+
+    move v8, v0
+
+    mul-float/2addr v6, v4
+
+    const/high16 v0, 0x43800000    # 256.0f
+
+    div-float/2addr v6, v0
+
+    add-float/2addr v6, v2
+
+    move v0, v6
+
+    goto :cond_set
+
+    :cond_n0
+    mul-float/2addr v6, v3
+
+    const/high16 v8, 0x43800000    # 256.0f
+
+    div-float/2addr v6, v8
+
+    add-float/2addr v6, v1
+
+    move v8, v6
+
+    mul-float/2addr v7, v4
+
+    const/high16 v0, 0x43400000    # 192.0f
+
+    div-float/2addr v7, v0
+
+    add-float/2addr v7, v2
+
+    move v0, v7
+
+    :cond_set
+    iput v8, p0, Lcom/dsemu/drastic/PenStick;->mSX:F
+
+    iput v0, p0, Lcom/dsemu/drastic/PenStick;->mSY:F
+
+    return-void
+.end method
+
+# tick: move o ponto; segurar parado >300ms encosta a caneta (arrasta); toque rapido = clique
 .method public tick()V
     .locals 10
 
     iget-boolean v0, p0, Lcom/dsemu/drastic/PenStick;->mDown:Z
 
-    if-eqz v0, :cond_ret
+    if-nez v0, :cond_active
 
+    iget v0, p0, Lcom/dsemu/drastic/PenStick;->mTap:I
+
+    if-lez v0, :cond_ret
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/dsemu/drastic/PenStick;->mTap:I
+
+    if-nez v0, :cond_resched
+
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->ni()Ln0/i;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_ret
+
+    invoke-virtual {v1}, Ln0/i;->penUp()V
+
+    goto :cond_ret
+
+    :cond_active
     invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->radius()F
 
     move-result v1
 
-    const v2, 0x3f1eb852    # 0.62f
+    const v4, 0x3f1eb852    # 0.62f
 
-    mul-float/2addr v1, v2
+    mul-float/2addr v1, v4
 
     iget v2, p0, Lcom/dsemu/drastic/PenStick;->mDx:F
 
@@ -493,6 +777,49 @@
 
     move-result v3
 
+    const/4 v4, 0x0
+
+    cmpl-float v5, v2, v4
+
+    if-nez v5, :cond_mv
+
+    cmpl-float v5, v3, v4
+
+    if-eqz v5, :cond_nomv
+
+    :cond_mv
+    const/4 v5, 0x1
+
+    iput-boolean v5, p0, Lcom/dsemu/drastic/PenStick;->mMoved:Z
+
+    :cond_nomv
+    iget-boolean v5, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    if-nez v5, :cond_scale
+
+    iget-boolean v5, p0, Lcom/dsemu/drastic/PenStick;->mMoved:Z
+
+    if-nez v5, :cond_scale
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v6
+
+    iget-wide v8, p0, Lcom/dsemu/drastic/PenStick;->mT0:J
+
+    sub-long/2addr v6, v8
+
+    const-wide/16 v8, 0x12c
+
+    cmp-long v5, v6, v8
+
+    if-ltz v5, :cond_scale
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    :cond_scale
     const/high16 v4, 0x40900000    # 4.5f
 
     mul-float/2addr v2, v4
@@ -572,7 +899,14 @@
 
     iput v6, p0, Lcom/dsemu/drastic/PenStick;->mPy:F
 
+    iget-boolean v5, p0, Lcom/dsemu/drastic/PenStick;->mPressed:Z
+
+    if-eqz v5, :cond_nopush
+
     invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->push()V
+
+    :cond_nopush
+    invoke-direct {p0}, Lcom/dsemu/drastic/PenStick;->refreshDot()V
 
     :cond_resched
     iget-object v0, p0, Lcom/dsemu/drastic/PenStick;->mHandler:Landroid/os/Handler;
