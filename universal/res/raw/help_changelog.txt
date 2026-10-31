@@ -44,7 +44,7 @@
 - Hide the stylus image and disabled pointer-down actions when the bottom screen is not visible and the right-stick mode is set to Stylus Pointer
 - Removed buggy display cutout handling code from the Customizer activity, fixing the issue where the layout editor could not use the bottom area
 - Updated and improved main menu button images (BY Handheld企鹅)
-- Added new default virtual controller theme (Made by Handheld企鹅). Preserved the original theme and renamed it to "DraStic Classic"
+- Added new default virtual controller theme (Made by Handheld企鹅). Preserved the original theme and renamed it to "AzuriDS Classic"
 - Added new option for display the DS bottom screen in single-screen layout
 - Remove outdated virtual controller assets
 - Improve the settings and help pages in TV mode
@@ -97,7 +97,7 @@
 - Improve layout and styling for filepicker menu (This menu is only available on Android 4–9)
 - Set the internal storage as the default URI for invoking SAF to prevent crashes on lower Android versions when SAF tries to access a deleted folder
 - Optimized the "Add-User" feature logic: since usernames are case-insensitive, an additional check was added when attempting to add a username that differs only in case
-- Adding a user named "default" is now disallowed, as this is DraStic default user name and could cause confusion
+- Adding a user named "default" is now disallowed, as this is AzuriDS default user name and could cause confusion
 - Fix an issue where selecting to keep existing data during system data migration could cause the application to crash in rare cases
 - Improve romselector menu: Add remove button functionality for Android 10+ tips
 - Improve styling for keynamer (Bluetooth devices rename) menu
@@ -395,7 +395,7 @@
 - Added support and auto-detection for specific devices (Shield, Xperia Play)
 - Added more info to savestate menu
 - Changed performance counters
-- 'DraStic' folder can be moved to external SD (or the root of anything that is mounted)
+- 'AzuriDS' folder can be moved to external SD (or the root of anything that is mounted)
 - Added notification
 - Added 'unlimited' option to fast-forward speed
 - Fixed pause shader being active after closing menu under certain conditions
@@ -432,7 +432,7 @@
 - Fix inability to go in-game in Big Bang Mini
 - Fixed potential GLES init problem
 - Uses game icons in game browser and for game shortcuts
-- DraStic added as a standard app to open .nds files
+- AzuriDS added as a standard app to open .nds files
 - Made Quick-Save/Load, Fast-Forward, Menu and diagonal directions mappable to keys/buttons
 - Added a fake mic button (playing white noise)
 - Device mic can be disabled
@@ -476,7 +476,7 @@
 <b>Version 2.1.3a:
 - Improved microphone support
 - Fix Google Drive issue with special chars in game name
-- DraStic root folder moved to /sdcard/drastic
+- AzuriDS root folder moved to /sdcard/drastic
 - Warn user of incompatible savestate instead of ignoring it
 - Fixed missing graphics errors in Justice League, Puyo Pop Fever, Adventure Time, Culdcept DS, Disgaea DS, Harvest Moon Isle of Happiness, and probably others
 - Fixed hang in Spore Creatures and Diddy Kong Racing

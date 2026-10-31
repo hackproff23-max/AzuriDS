@@ -61,7 +61,7 @@ cause the emulated top screen to follow the screen the player is on during
 main gameplay sequences.
 
 <b>Multi-threaded 3D rendering
-If you have multiple cores DraStic is sped up by being able to offload screen update tasks to another thread.
+If you have multiple cores AzuriDS is sped up by being able to offload screen update tasks to another thread.
 If you select the multi-threaded renderer option you will get even more benefit, 
 but this option can cause graphical glitches and instability.
 Please turn it off before reporting any problems.
@@ -110,7 +110,7 @@ Auto-fire toggle will toggle auto-fire on/off for the next button pressed. Auto-
 
 <b>Skin
 Select a skin for the virtual controller. The 'Default' skin is integrated, for an example of how to make your own skins, you can take a look at the 'Simple' skin 
-in /sdcard/DraStic/virtual_controller. Any <skin>.zip you add there has to contain PNGs with the same names and will automatically be selectable in this setting.
+in /sdcard/AzuriDS/virtual_controller. Any <skin>.zip you add there has to contain PNGs with the same names and will automatically be selectable in this setting.
 
 <b>Control also presses the DS touchscreen
 When this option is enabled, any button press on the on-screen controller will also touch the DS touchscreen below it.
@@ -184,9 +184,9 @@ Landscape: Fixes orientation for all lanscape layouts to landscape
 Reverse Landscape: Fixes orientation for all lanscape layouts to reverse-landscape
 
 <b>Autosave
-Enable to save your current progress automatically, when you quit DraStic.
+Enable to save your current progress automatically, when you quit AzuriDS.
 This save will not use any of your normal save slots,
-and you can only resume it by pressing "continue" from the main menu when you start DraStic the next time.
+and you can only resume it by pressing "continue" from the main menu when you start AzuriDS the next time.
 
 <b>Resume last save when starting from shortcut
 When starting a game from a game-shortcut, the last savestate will be automatically resumed
@@ -268,14 +268,14 @@ This will be automatically enabled for low-end devices. Using high-res textures 
 
 <b>Sleep in Rendering-Thread
 This can cause better performance on some devices (especially Adreno GPUs on Lollipop+).
-You can test if your device runs DraStic better with or without this setting.
+You can test if your device runs AzuriDS better with or without this setting.
 
 <b>Auto-Snap and Resize in Layout-Editor
 When enabled, the screens will adapt their position and size automatically to the other screen in the screen layout editor.
 Controller elements will snap to a grid in the controller layout editor.
 
 <b>Additional CPU Load
-When non-zero, DraStic will generate additional CPU load in an attempt force the device to remain in a high power state.
+When non-zero, AzuriDS will generate additional CPU load in an attempt force the device to remain in a high power state.
 This may speed up games on devices which should be more than powerful enough to
 run games full speed without frameskip, at the cost of battery life.
 On an affected device, increase this value slowly until the intended game runs full speed.
@@ -375,7 +375,7 @@ You can also edit the on-screen controller layout in the same way as the screen 
 Background images will be rendered full-screen behind the 2 screens and the virtual controller.
 Adding a background image can affect performance negatively!
 Accepted formats for background images are .png, .jpg, .bmp, or you can rename any of these to .dbg, if you don't want the image(s) to show up on your device's galleries.
-The files have to be inside the directory /DraStic/backgrounds in the internal memory, to be available in the selection menu.
+The files have to be inside the directory /AzuriDS/backgrounds in the internal memory, to be available in the selection menu.
 
 <b>Reset to default
 Reset the current screen layout in the editor to the default settings for the selected layout.
@@ -432,7 +432,7 @@ When you add a new user, you can optionally select the directory, where the user
 The slot 2 function allows inserting a virtual cartridge into an emulated slot 2 cartridge slot, which was present on original Nintendo DS and DS Lite units.
 Usually, this will be used to load Gameboy Advance games, which enables bonus features or save file transferring for some games.
 
-Slot 2 cartridge files should be placed in the sdcard/DraStic/slot2 directory.
+Slot 2 cartridge files should be placed in the sdcard/AzuriDS/slot2 directory.
 If a file named <ROM file>.gba is found, it will be loaded when <ROM file>.nds (or .zip, .rar, or .7z) is loaded.
 If a save file named <ROM file>.sav is found it will be loaded in the backup memory portion of the cartridge.
 The save file format is raw without any header and should be compatible with .sav files produced by VBA or gpSP. SRAM, FRAM, and flash are supported as save types.
@@ -442,8 +442,8 @@ If <ROM file>.gba is not present slot2_gamepak.gba (if present) and slot2_gamepa
 
 <t1>7. DLDI
 
-If a homebrew game is loaded DraStic will emulate an R4 flashcart and will redirect emulated SD card reads and writes to a file called drastic_dldi.img.
-This file should be placed in sdcard/DraStic.
+If a homebrew game is loaded AzuriDS will emulate an R4 flashcart and will redirect emulated SD card reads and writes to a file called drastic_dldi.img.
+This file should be placed in sdcard/AzuriDS.
 
 You can create the image file like this, on a Linux machine:
 dd if=/dev/zero of=drastic_dldi.img bs=1M count=<size in MB> of=drastic_dldi.img
@@ -472,7 +472,7 @@ dlditool r4tf.dldi <homebrew.nds>
 
 <t1>8. Lua interface
 
-Lua scripts can be placed inside DraStic/scripts and will be loaded if:
+Lua scripts can be placed inside AzuriDS/scripts and will be loaded if:
 - A script named <ROM file>.lua is found when a game is loaded.
 - A script named 'default.lua' is present. This default script will be loaded for any game.
 
@@ -486,7 +486,7 @@ Define the following 3 callbacks in your Lua script:
 <i>function on_load(game)
 <i>end
 
-// Will be called when a game is unloaded (before a new game is loaded, or when DraStic is exited).
+// Will be called when a game is unloaded (before a new game is loaded, or when AzuriDS is exited).
 // Use this to close any files you opened for example.
 <i>function on_unload()
 <i>end
@@ -525,21 +525,21 @@ If you want to set a certain button:
 <t2>8.3 Core Lua functions
 
 <b>drastic.get_path()
-Returns a string containing the path to the 'DraStic' folder.
+Returns a string containing the path to the 'AzuriDS' folder.
 
 <b>drastic.get_buttons()
 Returns an integer with the current button state.
 The state of individual buttons can be tested with the constants in drastic.C.<constant>.
 
 <b>drastic.set_buttons(buttons)
-Sets DraStic's button state to the integer passed as parameter.
+Sets AzuriDS's button state to the integer passed as parameter.
 
 <b>drastic.get_touch()
 Returns an integer containing the touch X coordinate in the upper 16 bits, 
 and the touch Y coordinate in the lower 16 bits.
 
 <b>drastic.set_touch(touch_x, touch_y)
-Sets DraStic's touch coordinates to the values passed as parameters.
+Sets AzuriDS's touch coordinates to the values passed as parameters.
 This only sets the coordinates, if you want to actually press/depress the touchscreen,
 set and unset drastic.C.BUTTON_TOUCH with drastic.set_buttons().
 

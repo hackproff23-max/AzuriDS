@@ -82,19 +82,19 @@ Si prega di provare a estrarre e caricare il file .nds"</string>
     <string name="str_err_badrom">Il file che stai tentanto di aprire non è una ROM valida.</string>
     <string name="str_err_encrom">"Questa versione della ROM è criptata. Le ROM criptate possono essere caricate solamente usando il BIOS Nintendo ARM7 estratto dal tuo Nintendo DS.
 Si prega di fare riferimento alle nostre FAQ su drastic-ds.com per le informazioni riguardo il BIOS Nintendo ARM7, o su come decriptare una ROM tu stesso."</string>
-    <string name="str_err_install">"DraStic could not write to
+    <string name="str_err_install">"AzuriDS could not write to
 $path$.
 Please check the free space on the internal storage and make sure the directory has writing permission.
 Also try to reboot your device."</string>
-    <string name="str_err_jniload">"Impossibile inizializzare DraStic. Si prega di riscaricare l'applicazione."</string>
-    <string name="str_err_lowmem">Il dispositivo sta esaurendo la memoria, DraStic potrebbe chiudersi inaspettatamente.</string>
-    <string name="str_err_lowmem_zip">"Il dispositivo sta esaurendo la memoria, DraStic potrebbe chiudersi inaspettatamente.
+    <string name="str_err_jniload">"Impossibile inizializzare AzuriDS. Si prega di riscaricare l'applicazione."</string>
+    <string name="str_err_lowmem">Il dispositivo sta esaurendo la memoria, AzuriDS potrebbe chiudersi inaspettatamente.</string>
+    <string name="str_err_lowmem_zip">"Il dispositivo sta esaurendo la memoria, AzuriDS potrebbe chiudersi inaspettatamente.
 Prova a decomprimere il gioco, giocare con i file .zip occupa più memoria."</string>
-    <string name="str_err_nomount">Impossibile creare la cartella dei salvataggi. Se il dispositivo è connesso a un PC/Mac tramite USB, si prega di disconnetterlo e riavviare DraStic.</string>
+    <string name="str_err_nomount">Impossibile creare la cartella dei salvataggi. Se il dispositivo è connesso a un PC/Mac tramite USB, si prega di disconnetterlo e riavviare AzuriDS.</string>
     <string name="str_err_nospace">Impossibile caricare il gioco. Si prega di liberare un pò di spazio nella Memoria Interna</string>
-    <string name="str_err_reload">"DraStic è stato chiuso mentre era in sospensione e necessita un riavvio.
+    <string name="str_err_reload">"AzuriDS è stato chiuso mentre era in sospensione e necessita un riavvio.
 Dovrebbe essere possibile riprendere il gioco premendo 'Continua'."</string>
-    <string name="str_err_reload_auto">"DraStic è stato chiuso mentre era in sospensione e necessita un riavvio.
+    <string name="str_err_reload_auto">"AzuriDS è stato chiuso mentre era in sospensione e necessita un riavvio.
 Per salvare i progressi in questi casi, si prega di abilitare l'auto-salvataggio in pausa/sospensione.
 Vuoi attivare quest'opzione ora?"</string>
     <string name="str_err_romgeneral">Si è verificato un errore durante caricamento del gioco</string>
@@ -150,7 +150,7 @@ Scegli 'No' per iniziare una nuova partita"</string>
     <string name="str_menu_pause">Menu di Gioco</string>
     <string name="str_menu_reset_confirm">"Resettare il gioco?
 I progressi attuali verranno persi."</string>
-    <string name="str_menu_rootmoved">La Cartella Dati di DraStic è impostata su:</string>
+    <string name="str_menu_rootmoved">La Cartella Dati di AzuriDS è impostata su:</string>
     <string name="str_menu_saving_busy">Azione di Salvataggio ancora in corso</string>
     <string name="str_menu_shortcut">Creare una scorciatoia nella Home?</string>
     <string name="str_menu_yes">Sì</string>
@@ -170,7 +170,7 @@ I progressi attuali verranno persi."</string>
     <string name="str_set_autotrim">Taglio Automatico della ROM</string>
     <string name="str_set_backupinsave">Archivia Salv. di Gioco nei Salv. di Stato</string>
     <string name="str_set_backupinsave_warn">"Attenzione: Disattivare quest'opzione può causare la de-sincrinizzazione dei Salv. di Stato e dei Salv. di Gioco, portando al danneggiamento dei salvataggi.
-Si prega di riavviare DraStic affinché le modifiche abbiano effetto."</string>
+Si prega di riavviare AzuriDS affinché le modifiche abbiano effetto."</string>
     <string name="str_set_bday">Compleanno</string>
     <string name="str_set_bday_hint">Mese/Giorno</string>
     <string name="str_set_btn_advanced">Avanzate</string>
@@ -280,7 +280,7 @@ Si prega di mappare un bottone per tale funzione tramite 'Mappa C. Speciali'"</s
     <string name="str_set_nodiagonals">No diagonal Input for On-Screen D-pad</string>
     <string name="str_set_none">Nessuno</string>
     <string name="str_set_overwrite">Sovrascrivere un Salv. di Stato richiede una Conferma</string>
-    <string name="str_set_restart_req">Riavvia DraStic affinché le modifiche abbiano effetto</string>
+    <string name="str_set_restart_req">Riavvia AzuriDS affinché le modifiche abbiano effetto</string>
     <string name="str_set_rtc_system_time">"Usa sempre la Data di Sistema per l'RTC"</string>
     <string name="str_set_settings">Configura Opzioni</string>
     <string name="str_set_settings_game">Configura Opzioni (Gioco)</string>
@@ -327,5 +327,5 @@ al Gioco"</string>
     <string name="str_ui_setcheatscustom">Trucchi Personalizzati</string>
     <string name="str_user_info">Utente:</string>
     <string name="str_user_title">Utente Attuale:</string>
-    <string name="str_warn_activities">"Si prega di disabilitare 'Non conservare attività' nelle Opzioni Sviluppatore per assicurare a DraStic il normale funzionamento."</string>
+    <string name="str_warn_activities">"Si prega di disabilitare 'Non conservare attività' nelle Opzioni Sviluppatore per assicurare a AzuriDS il normale funzionamento."</string>
 </resources>

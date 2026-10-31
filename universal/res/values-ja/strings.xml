@@ -74,23 +74,23 @@
     <string name="str_err_badrom">このファイルは有効なROMではありません。</string>
     <string name="str_err_encrom">"このバージョンのROMは暗号化されています。 暗号化したROMはお使いのNintendo DSからダンプしたNintendo ARM7 BIOSでしかプレイできません。
 弊社のdrastic-ds.comにあるよくある質問をご覧になり、Nintendo ARM7 BIOSについての情報を得たり、自分で暗号化を解除する方法を手に入れたりできます。"</string>
-    <string name="str_err_install">"DraSticは次のフォルダへ書き込めませんでした。 
+    <string name="str_err_install">"AzuriDSは次のフォルダへ書き込めませんでした。 
 $path$.
 内部ストレージの空き領域と書き込み権限を確認してください。
 デバイスも再起動してみてください。"</string>
-    <string name="str_err_jniload">DraSticは初期化できません。もう一度アプリをダウンロードしてみてください。</string>
-    <string name="str_err_lowmem">このデバイスのメモリが不足しているため、DraSticは不意に終了されることがあります。</string>
-    <string name="str_err_lowmem_zip">"このデバイスが不足しているため、DraSticは不意に終了されることがあります。
+    <string name="str_err_jniload">AzuriDSは初期化できません。もう一度アプリをダウンロードしてみてください。</string>
+    <string name="str_err_lowmem">このデバイスのメモリが不足しているため、AzuriDSは不意に終了されることがあります。</string>
+    <string name="str_err_lowmem_zip">"このデバイスが不足しているため、AzuriDSは不意に終了されることがあります。
 .zipファイルでプレイすればもっとメモリを消費するので、ファイルを解凍してからプレイしてください。"</string>
-    <string name="str_err_nomount">DraSticはセーブデータのフォルダを作成できません。デバイスはUSB経由でPCに接続している場合、接続を切断してＤｒａＳｔｉｃを再起動してください。</string>
+    <string name="str_err_nomount">AzuriDSはセーブデータのフォルダを作成できません。デバイスはUSB経由でPCに接続している場合、接続を切断してＤｒａＳｔｉｃを再起動してください。</string>
     <string name="str_err_nospace">ゲームをロードできませんでした。内部ストレージの空き領域を増やしてください。</string>
-    <string name="str_err_reload">"DraSticは一時停止したとき終了され、再起動する必要があります。
+    <string name="str_err_reload">"AzuriDSは一時停止したとき終了され、再起動する必要があります。
 「続きから」を押すとゲームを再開できます。"</string>
-    <string name="str_err_reload_auto">"DraSticは一時停止したとき終了され、再起動する必要があります。
+    <string name="str_err_reload_auto">"AzuriDSは一時停止したとき終了され、再起動する必要があります。
 今後こういう場合も進行状況をセーブできるよう、一時停止時自動セーブをオンにしてください。
 今すぐオンにしますか？"</string>
     <string name="str_err_romgeneral">ゲームをロードしたときエラーが発生しました。</string>
-    <string name="str_err_rootpath">DraSticはデータディレクトリにアクセスできませんでした。アプリを再起動してください。</string>
+    <string name="str_err_rootpath">AzuriDSはデータディレクトリにアクセスできませんでした。アプリを再起動してください。</string>
     <string name="str_gm_changegame">ゲームを切り替える</string>
     <string name="str_gm_cheats">チートデータベース</string>
     <string name="str_gm_cheats_add">チートを追加</string>
@@ -140,7 +140,7 @@ $path$.
     <string name="str_menu_pause">ゲームメニュー</string>
     <string name="str_menu_reset_confirm">"ゲームをリセットしますか？
 現在の進行状況は失われます。"</string>
-    <string name="str_menu_rootmoved">DraSticのデータディレクトリは次にセットしました：</string>
+    <string name="str_menu_rootmoved">AzuriDSのデータディレクトリは次にセットしました：</string>
     <string name="str_menu_saving_busy">今はセーブ中です</string>
     <string name="str_menu_shortcut">デスクトップにショートカットをインストールしますか？</string>
     <string name="str_menu_yes">はい</string>
@@ -160,7 +160,7 @@ $path$.
     <string name="str_set_autotrim">自動的にROMをトリミング</string>
     <string name="str_set_backupinsave">状態セーブデータにゲーム内セーブデータを保存</string>
     <string name="str_set_backupinsave_warn">"警告：このオプションを無効にすると、状態データとゲーム内セーブデータとのシンクロを切断し、セーブデータを壊す可能性があります。
-設定を反映するにはDraSticを再起動してください。"</string>
+設定を反映するにはAzuriDSを再起動してください。"</string>
     <string name="str_set_bday">誕生日</string>
     <string name="str_set_bday_hint">月/日</string>
     <string name="str_set_btn_advanced">その他</string>
@@ -256,7 +256,7 @@ $path$.
     <string name="str_set_nodiagonals">画面Dパッドの斜め入力を無効化</string>
     <string name="str_set_none">なし</string>
     <string name="str_set_overwrite">状態データ上書き確認を表示</string>
-    <string name="str_set_restart_req">変更を反映するにはDraSticを再起動してください</string>
+    <string name="str_set_restart_req">変更を反映するにはAzuriDSを再起動してください</string>
     <string name="str_set_rtc_system_time">常にシステム時刻をRTCとして使用</string>
     <string name="str_set_settings">設定を変更</string>
     <string name="str_set_showfps">FPS表示</string>
@@ -272,8 +272,8 @@ $path$.
     <string name="str_set_threaded">マルチスレッド3Dレンダリング</string>
     <string name="str_set_threaded_hint">"3D効果の多くのゲームのパーフォーマンスを向上させます。しかし、かえってあるゲームでは画面の故障を起こすことがあります（画面のスワップなど）。
 レンダリング故障が発生する場合、このオプションをオフにしてください。
-変更を反映するにはDraSticを再起動してください。"</string>
-    <string name="str_set_threaded_warn">設定を反映するにはDraSticを再起動してください。これは実験的な機能であり、問題を発生させる、またはアプリをクラッシュさせることがあります。問題を避けるには、オフにしてください。</string>
+変更を反映するにはAzuriDSを再起動してください。"</string>
+    <string name="str_set_threaded_warn">設定を反映するにはAzuriDSを再起動してください。これは実験的な機能であり、問題を発生させる、またはアプリをクラッシュさせることがあります。問題を避けるには、オフにしてください。</string>
     <string name="str_set_touchthrough">コントローラーの押しをDSタッチスクリーンにも送る</string>
     <string name="str_set_volume_value">音量</string>
     <string name="str_sm_back">"ゲームへ

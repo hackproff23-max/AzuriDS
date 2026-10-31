@@ -4722,7 +4722,7 @@
 
     move-result-object p3
 
-    const-string v5, "com.dsemu.drastic.provider"
+    const-string v5, "org.azuri.ds.provider"
 
     invoke-virtual {p3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

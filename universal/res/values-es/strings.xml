@@ -77,16 +77,16 @@
     <string name="str_err_badarc">El archivo que intentaste abrir no es compatible. Por favor extrae el archivo .nds y carga ese en su lugar</string>
     <string name="str_err_badrom">El archivo que intentaste abrir no es una ROM válida.</string>
     <string name="str_err_encrom">Esta versión de la ROM está encriptada. Las ROMs encriptadas solamente pueden ser cargadas usando el BIOS ARM7 de Nintendo, vertido directamente de tu Nintendo DS. Por favor, consulta nuestra sección de Preguntas recientes en drastic-ds.com para información acerca del BIOS ARM7 de Nintendo, o cómo desencriptar la ROM por ti mismo.</string>
-    <string name="str_err_install">DraStic no pudo escribir en $path$. Por favor, verifica el espacio libre en el almacenamiento interno y asegúrate de que el directorio tenga permisos de escritura. Además, intenta reiniciar tu dispositivo.</string>
-    <string name="str_err_jniload">DraStic no pudo ser iniciado. Por favor, intenta descargando la app nuevamente.</string>
-    <string name="str_err_lowmem">El dispositivo está bajo de memoria, DraStic podría cerrarse inesperadamente...</string>
-    <string name="str_err_lowmem_zip">El dispositivo está bajo de memoria, DraStic podría cerrar inesperadamente. Trata de descomprimir el juego, ya que jugar desde el archivo .zip consume mucha memoria.</string>
-    <string name="str_err_nomount">DraStic no puede crear su propia carpeta de guardado. Si tu dispositivo está conectado a una PC/Mac mediante USB, por favor desconéctalo y reinicia DraStic.</string>
+    <string name="str_err_install">AzuriDS no pudo escribir en $path$. Por favor, verifica el espacio libre en el almacenamiento interno y asegúrate de que el directorio tenga permisos de escritura. Además, intenta reiniciar tu dispositivo.</string>
+    <string name="str_err_jniload">AzuriDS no pudo ser iniciado. Por favor, intenta descargando la app nuevamente.</string>
+    <string name="str_err_lowmem">El dispositivo está bajo de memoria, AzuriDS podría cerrarse inesperadamente...</string>
+    <string name="str_err_lowmem_zip">El dispositivo está bajo de memoria, AzuriDS podría cerrar inesperadamente. Trata de descomprimir el juego, ya que jugar desde el archivo .zip consume mucha memoria.</string>
+    <string name="str_err_nomount">AzuriDS no puede crear su propia carpeta de guardado. Si tu dispositivo está conectado a una PC/Mac mediante USB, por favor desconéctalo y reinicia AzuriDS.</string>
     <string name="str_err_nospace">El juego no pudo ser cargado. Por favor, libera algo de espacio en tu almacenamiento interno</string>
-    <string name="str_err_reload">DraStic ha sido cerrado mientras estaba suspendido y necesita ser reiniciadoo. Deberías ser capaz de reanudar tu juego presionando «Continuar».</string>
-    <string name="str_err_reload_auto">DraStic ha sido cerrado mientras estaba suspendido y necesita ser reiniciado. Para mantener tu progreso en tales casos, por favor mantén habilitado el guardado automático en pausa/suspensión. ¿Deseas habilitar el ajuste ahora?</string>
+    <string name="str_err_reload">AzuriDS ha sido cerrado mientras estaba suspendido y necesita ser reiniciadoo. Deberías ser capaz de reanudar tu juego presionando «Continuar».</string>
+    <string name="str_err_reload_auto">AzuriDS ha sido cerrado mientras estaba suspendido y necesita ser reiniciado. Para mantener tu progreso en tales casos, por favor mantén habilitado el guardado automático en pausa/suspensión. ¿Deseas habilitar el ajuste ahora?</string>
     <string name="str_err_romgeneral">Un error ocurrió mientras intentabas cargar el juego</string>
-    <string name="str_err_rootpath">DraStic no pudo acceder al directorio de datos. Por favor, reinicia la aplicación</string>
+    <string name="str_err_rootpath">AzuriDS no pudo acceder al directorio de datos. Por favor, reinicia la aplicación</string>
     <string name="str_gm_changegame">Cambiar juego</string>
     <string name="str_gm_cheats">Base de datos de trucos</string>
     <string name="str_gm_cheats_add">Añadir truco</string>
@@ -136,7 +136,7 @@
     <string name="str_menu_no">No</string>
     <string name="str_menu_pause">Menú de juego</string>
     <string name="str_menu_reset_confirm">¿Desea reiniciar el juego? El progreso actual se perderá.</string>
-    <string name="str_menu_rootmoved">Ajustar directorio de datos de DraStic a:</string>
+    <string name="str_menu_rootmoved">Ajustar directorio de datos de AzuriDS a:</string>
     <string name="str_menu_saving_busy">Guardado todavía en progreso</string>
     <string name="str_menu_shortcut">¿Instalar acceso directo a tu pantalla de inicio?</string>
     <string name="str_menu_yes">Sí</string>
@@ -155,7 +155,7 @@
     <string name="str_set_autosave">Autoguardado</string>
     <string name="str_set_autotrim">Recortar ROM automáticamente</string>
     <string name="str_set_backupinsave">Alacenar guardados dentro del juego en estados de guardado</string>
-    <string name="str_set_backupinsave_warn">Advertencia: desactivar esta opción puede causar que los estados de guardado y los guardados dentro del juego se desincronicen, desencadenando la corrúpción de los estados de guardado. Por favor reinicia DraStic para que el cambio surta efecto.</string>
+    <string name="str_set_backupinsave_warn">Advertencia: desactivar esta opción puede causar que los estados de guardado y los guardados dentro del juego se desincronicen, desencadenando la corrúpción de los estados de guardado. Por favor reinicia AzuriDS para que el cambio surta efecto.</string>
     <string name="str_set_bday">Fecha de cumpleaños</string>
     <string name="str_set_bday_hint">Mes/día</string>
     <string name="str_set_btn_advanced">Avanzado</string>
@@ -261,7 +261,7 @@
     <string name="str_set_nodiagonals">Ninguna introducción diagonal para la cruceta en pantalla</string>
     <string name="str_set_none">Ninguno</string>
     <string name="str_set_overwrite">La sobrescritura de los estados de guardado necesita confirmación</string>
-    <string name="str_set_restart_req">Reinicia DraStic para que los cambios surtan efecto</string>
+    <string name="str_set_restart_req">Reinicia AzuriDS para que los cambios surtan efecto</string>
     <string name="str_set_rtc_system_time">Siempre usar la hora del sistema para el reloj en tiempo real</string>
     <string name="str_set_settings">Configurar opciones</string>
     <string name="str_set_settings_game">Configurar opciones (por juego)</string>
@@ -306,5 +306,5 @@
     <string name="str_ui_setcheatscustom">Trucos personalizados</string>
     <string name="str_user_info">Usuario:</string>
     <string name="str_user_title">Usuario actual:</string>
-    <string name="str_warn_activities">Por favor, deshabilita «Destruir actividades» en las Opciones de desarrollo para que DraStic funcione normalmente.</string>
+    <string name="str_warn_activities">Por favor, deshabilita «Destruir actividades» en las Opciones de desarrollo para que AzuriDS funcione normalmente.</string>
 </resources>

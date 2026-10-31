@@ -58,7 +58,7 @@ Dies kann bei manchen Spielen (hauptsächlich 2D Sonic-Spiele wie Rush oder Chro
 Bei vielen Spielen kann die Einstellungen jedoch zu Fehlern in der Anzeige führen, deshalb bitte nur aktivieren falls es wirklich benötigt wird!
 
 <b>Multi-Thread 3D Rendering
-Auf Geräten mit mehreren CPU-Kernen wird DraStic beschleunigt indem die Grafikberechnugen auf mehrere Threads verteilt werden.
+Auf Geräten mit mehreren CPU-Kernen wird AzuriDS beschleunigt indem die Grafikberechnugen auf mehrere Threads verteilt werden.
 Wenn diese Einstellung aktiv ist, dann fällt die Beschleunigung noch größer aus, es kann jedoch zu Grafikfehlern und Instabilität führen.
 Deshalb bitte die Option deaktivieren, falls Probleme auftreten, und bevor ein Problem an uns gemeldet wird.
 
@@ -106,7 +106,7 @@ Hier können Funktionen wie Schnellvorlauf, Schnell-Speichern/Laden etc. speziel
 
 <b>Skin
 Wählt den 'Skin' für das virtuelle Gamepad aus. Neben den integrierten Skins kannst du auch deine eigenen Skins machen.
-Dazu sehe dir bitte als Beispiel den Skin 'Simple' in /sdcard/DraStic/virtual_controller an.
+Dazu sehe dir bitte als Beispiel den Skin 'Simple' in /sdcard/AzuriDS/virtual_controller an.
 Jede <skin>.zip Datei in diesem Ordner, welche PNGs mit den selben Namen wie in Simple.zip enthält wird dann automatisch als Einstellung hier angezeigt.
 
 <b>Auch der Touch-Bildschirm unter Gamepad-Tasten wird berührt
@@ -348,7 +348,7 @@ Auch das Layout des virtuellen Gamepads lässt sich über 'Controller-Layout bea
 Hintergrundbilder füllen den gesamten Bildschirm aus und werden hinter den 2 DS-Bildschirmen und dem virtuellen Gamepad gerendert.
 Das Hinzufügen von Hintergrundbildern kann die Leistung verschlechtern!
 Hintergrundbilder können in den Formaten .png, .jpg, .bmp sein, oder eins dieser Formate kann in .dbg umbenannt werden, wenn du vermeiden möchtest, dass die Bilder in den Galerien deines Geräts auftauchen.
-Die Dateien müssen sich im Verzeichis /DraStic/backgrounds im internen Speicher des Geräts befinden, damit sie in der Auswahl angezeigt werden.
+Die Dateien müssen sich im Verzeichis /AzuriDS/backgrounds im internen Speicher des Geräts befinden, damit sie in der Auswahl angezeigt werden.
 
 
 <b>Zurücksetzen
@@ -407,7 +407,7 @@ Die Slot 2 - Emulation erlaubt es, ein Spiel in einen emulierten Slot 2 zu laden
 Dies kann benutzt werden, um Gameboy Advance Spiele zu laden, wodurch sich in einigen DS-Spielen zusätzliche Funktionen freischalten lassen, oder Speicherstände übertragen werden können.
 Gameboy Advance Spiele lassen sich hierdurch NICHT spielen!
 
-Die Spieledateien für Slot 2 sollten im Ordner /sdcard/DraStic/slot2 abgelegt werden.
+Die Spieledateien für Slot 2 sollten im Ordner /sdcard/AzuriDS/slot2 abgelegt werden.
 Falls eine Datei namens <DS-ROM Dateiname>.gba gefunden wird, wird sie geladen, wenn <DS-ROM Dateiname>.nds (oder .zip, .rar, .7z) geladen wird.
 Falls ebenfalls eine Datei namens <DS-ROM Dateiname>.sav gefunden wird, wird diese in den Speicher geladen, wo sich normalerweise der Speicherstand von Slot 2 Spielen befindet.
 Der Speicherstand muss im Format 'raw' ohne Header vorliegen und sollte mit .sav Dateien kompatibel sein, welche von VBA oder gpSP erzeugt werden.
@@ -418,8 +418,8 @@ Alternativ, falls <DS-ROM Dateiname>.gba nicht vorhanden ist, jedoch slot2_gamep
 
 <t1>7. DLDI
 
-Falls ein Homebrew-Spiel/Programm geladen wird, emuliert DraStic eine R4 Flashkarte und leitet emulierte Lese- und Schreibzugriffe auf die SD-Karte an eine Datei namens drastic_dldi.img weiter.
-Diese Datei sollte in /sdcard/DraStic abgelegt werden.
+Falls ein Homebrew-Spiel/Programm geladen wird, emuliert AzuriDS eine R4 Flashkarte und leitet emulierte Lese- und Schreibzugriffe auf die SD-Karte an eine Datei namens drastic_dldi.img weiter.
+Diese Datei sollte in /sdcard/AzuriDS abgelegt werden.
 
 Auf einem Linux-Rechner kann diese Image-Datei wie folgt erzeugt werden:
 dd if=/dev/zero of=drastic_dldi.img bs=1M count=<size in MB> of=drastic_dldi.img
@@ -447,7 +447,7 @@ dlditool r4tf.dldi <homebrew.nds>
 
 <t1>8. Lua Interface
 
-Lua-Skripte in DraStic/scripts werden geladen, falls:
+Lua-Skripte in AzuriDS/scripts werden geladen, falls:
 - Ein Skript namens <DS-ROM Dateiname>.lua vorhanden ist, wenn ein Spiel geladen wird.
 - Ein Skript namens 'default.lua' vorhanden ist. Dieses wird für jedes Spiel geladen.
 
@@ -500,7 +500,7 @@ So lässt sich eine bestimmte Taste setzen:
 <t2>8.3 Core Lua-Funktionen
 
 <b>drastic.get_path()
-Return: Einen String, welcher den Pfad zum 'DraStic'-Ordner enthält.
+Return: Einen String, welcher den Pfad zum 'AzuriDS'-Ordner enthält.
 
 <b>drastic.get_buttons()
 Return: Integer mit dem momentanen Zustand der Tasten.

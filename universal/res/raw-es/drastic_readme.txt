@@ -68,7 +68,7 @@ siga la pantalla en la que el jugador está durante las secuencias de juego
 principales.
 
 <b>Renderizado en 3D multihilado
-Si tienes múltiples núcleos, DraStic es acelerado al ser capaz de descargar la actualización de la pantalla
+Si tienes múltiples núcleos, AzuriDS es acelerado al ser capaz de descargar la actualización de la pantalla
 gracias a otro hilo.
 Si seleccionas la opción de renderizado multihilado conseguirás incluso más beneficios,
 pero esta opción puede ocasionar fallas gráficas e inestabilidad.
@@ -122,7 +122,7 @@ a A, B, X, Y, L y R.
 
 <b>Piel
 Selecciona una piel para el controlador virtual. La piel «Predeterminada» está integrada; para un ejemplo de cómo hacer tus propias pieles, puedes echarle un
-vistazo a la piel «Simple» en /sdcard/DraStic/virtual_controller. Cualquier <piel>.zip que añadas allí debe contener PNGs con los mismos nombres y serán automáticamente seleccionables en este ajuste.
+vistazo a la piel «Simple» en /sdcard/AzuriDS/virtual_controller. Cualquier <piel>.zip que añadas allí debe contener PNGs con los mismos nombres y serán automáticamente seleccionables en este ajuste.
 
 <b>Las presiones del control también tocan la pantalla táctil de la DS
 Cuando esta opción esté habilitada, cualquier presión del botón en el controlador en pantalla también tocará la pantalla de la DS debajo de él.
@@ -198,9 +198,9 @@ Horizontal: fija la orientación para todas las disposiciones horizontales a hor
 Horizontal inverso: fija la orientación para todas las disposiciones horizontales a horizontal inverso.
 
 <b>Guardar automáticamente
-Habilita el guardado de tu progreso actual de manera automática, cuando salgas de DraStic.
+Habilita el guardado de tu progreso actual de manera automática, cuando salgas de AzuriDS.
 Este guardado no usará ninguna de tus ranuras de guardado normales, y solamente puedes
-reanudarlo al presionar «continuar» desde el menú principal, cuando inicies DraStic la próxima vez.
+reanudarlo al presionar «continuar» desde el menú principal, cuando inicies AzuriDS la próxima vez.
 
 <b>Reanudar el último archivo de guardado al empezar desde accesos directos
 Al iniciar un juego desde el acceso directo de un juego, el último estado de guardado será automáticamente reanudado
@@ -276,7 +276,7 @@ Esto se habilitará automáticamente para los dispositivos de gama baja. Utiliza
 
 <b>Reposar en hilos de ejecución de renderizado
 Esto puede causar un mejor desempeño en algunos dispositivos (especialmente, en GPUs de Aurdino en Android Lollipop).
-Puedes probar si tu dispositivo ejecuta DraStic en mejores condiciones con o sin este ajuste.
+Puedes probar si tu dispositivo ejecuta AzuriDS en mejores condiciones con o sin este ajuste.
 
 <b>Romper automáticamente y redimensionar en el editor de disposición
 Cuando se activa, las pantallas adaptarán su posición y tamaño automáticamente al de la otra pantalla en el editor de disposición de pantalla.
@@ -376,7 +376,7 @@ También puedes editar la disposición del controlador en pantalla de la misma m
 Las imágenes de fondo serán renderizadas en pantalla completa detrás de las 2 pantallas y del controlador virtual.
 ¡Añadir una imagen de fondo puede afectar negativamente el rendimiento!
 Los formatos aceptados para las imágenes de fondo son .png, .jpg, .bmp, o puedes renombrar cualquiera de esos a .dbj si no quieres que las imágenes se muestren en las galerías de tu dispositivo.
-Los archivos tienen que estar dentro del directorio /DraStic/backgrounds en la memoria interna, para estar disponibles en el menú de selección.
+Los archivos tienen que estar dentro del directorio /AzuriDS/backgrounds en la memoria interna, para estar disponibles en el menú de selección.
 
 <b>Reiniciar al ajuste predeterminado
 Reinicia la disposición de pantalla actual en el editor al ajuste predeterminado para la disposición seleccionada.
@@ -431,7 +431,7 @@ Cuando añadas un nuevo usuario, podrás seleccionar óptimamente el directorio,
 
 La función de la ranura 2 permite insertar un cartucho virtual dentro de una ranura de cartucho 2 emulada, la cual está presente en las unidades originales de Nintendo DS y DS Lite. Usualmente, esta ranura será usada para cargar juegos de GameBoy Advance, lo cual habilita funcionalidades bonificantes o transferencias de archivos de guardado para algunos juegos.
 
-Los archivos de la ranura 2 para cartuchos deberían estar situados en el directorio sdcard/DraStic/slot2.
+Los archivos de la ranura 2 para cartuchos deberían estar situados en el directorio sdcard/AzuriDS/slot2.
 Si el nombre de archivo <archivo ROM>.gba es hallado, será cargado cuando <archivo ROM>.nds (o .zip, .rar, o .7z) sea cargado.
 Si un archivo de guardado llamado <archivo ROM>.sav es hallado, será cargado en la porción de memoria de respaldo del cartucho.
 El formato del archivo de guardado es de datos sin procesar, sin ningún encabezado, y debería ser compatible con los archivos .sav producidos por VBA o gpSP. SRAM, FRAM, y flash son admitidos como tipos de guardado.
@@ -441,8 +441,8 @@ Si <archivo ROM>.gba no está presente, slot2_gamepak.gba (si es que está prese
 
 <t1>7. DLDI
 
-Si un juego de homebrew es cargado, DraStic emulará un cartucho flash R4 y redirigirá lecturas y escrituras de la tarjeta SD emulada a un archivo llamado drastic_dldi.img.
-Este archivo debería ser ubicado en sdcard/DraStic.
+Si un juego de homebrew es cargado, AzuriDS emulará un cartucho flash R4 y redirigirá lecturas y escrituras de la tarjeta SD emulada a un archivo llamado drastic_dldi.img.
+Este archivo debería ser ubicado en sdcard/AzuriDS.
 
 Puedes crear el archivo de imagen de esta manera, en una máquina con Linux:
 dd if=/dev/zero of=drastic_dldi.img bs=1M count=<size in MB> of=drastic_dldi.img
@@ -471,7 +471,7 @@ dlditool r4tf.dldi <homebrew.nds>
 
 <t1>8. Interfaz en Lua
 
-Las secuencias de comando en Lua pueden ser situadas dentro de DraStic/scripts, y serán cargadas si:
+Las secuencias de comando en Lua pueden ser situadas dentro de AzuriDS/scripts, y serán cargadas si:
 - Una secuencia de comando llamada <archivo ROM>.lua es hallado cuando el juego sea cargado.
 - Una secuencia de comando llamada 'default.lua' es presente. Esta secuencia de comandos predeterminada será cargada para cualquier juego.
 
@@ -485,7 +485,7 @@ Defiine los siguientes 3 retrollamadas en tu secuencia de comando en Lua:
 <i>function on_load(game)
 <i>end
 
-// Será llamado cuando un juego sea descargado (antes de que un nuevo juego sea cargado, o cuando DraStic sea abandonado).
+// Será llamado cuando un juego sea descargado (antes de que un nuevo juego sea cargado, o cuando AzuriDS sea abandonado).
 // Usa esto para cerrar cualquier archivo que hayas abierto, por ejemplo.
 <i>function on_unload()
 <i>end
@@ -524,21 +524,21 @@ Si deseas establecer cierto botón:
 <t2>8.3 Funciones nucleares en Lua
 
 <b>drastic.get_path()
-Devuelve una cadena de caracteres que contiene la ruta a la carpeta «DraStic».
+Devuelve una cadena de caracteres que contiene la ruta a la carpeta «AzuriDS».
 
 <b>drastic.get_buttons()
 Devuelve un entero con el estado de botón actual.
 El estado de los botones individuales puede ser comprobado con las constantes en drastic.C.<constante>.
 
 <b>drastic.set_buttons(buttons)
-Establece el estado de botón de DraStic al entero pasado como parámetro.
+Establece el estado de botón de AzuriDS al entero pasado como parámetro.
 
 <b>drastic.get_touch()
 Devuelve un entero que contiene un entero, el cual a su vez contiene la coordenada X de toque en los 16 bits superiores, 
 y la coordenada Y de toque en los 16 bits inferiores.
 
 <b>drastic.set_touch(touch_x, touch_y)
-Establece las coordenadas de toque de DraStic a los valores pasados como parámetros.
+Establece las coordenadas de toque de AzuriDS a los valores pasados como parámetros.
 Esto solamente establece las coordenadas, si deseas presionar o despresionar la pantalla táctil,
 establece y desestablece drastic.C.BUTTON_TOUCH con drastic.set_buttons().
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_provider_info">DraStic 内置数据存储目录</string>
+    <string name="app_provider_info">AzuriDS 内置数据存储目录</string>
     <string name="btn_rom_all">全部</string>
     <string name="btn_rom_recent">最近的</string>
     <string name="empty" />
@@ -11,7 +11,7 @@
     <string name="str_add_user_button">添加</string>
     <string name="str_add_user_exists">用户已存在</string>
     <string name="str_add_user_del_warn">删除用户将会清除该用户的所有数据文件(电池存档、即时存档、自定义金手指以及布局配置等)。该操作无法撤销! 确定要继续吗? (为了防止出现问题, 删除操作完成后将自动切换到默认用户并刷新用户列表)</string>
-    <string name="str_user_oldpathwarn" formatted="false">该用户正在使用的旧版外置数据目录 %s 已不再被 DraStic 支持或访问。请将该用户的所有数据复制到您当前数据存储目录的 \"/users/%s\" 目录中,  并在复制完成后点击\"继续\"以完成数据迁移。如果您不想迁移数据, 可直接点击\"继续\"以使用新用户数据目录。</string>
+    <string name="str_user_oldpathwarn" formatted="false">该用户正在使用的旧版外置数据目录 %s 已不再被 AzuriDS 支持或访问。请将该用户的所有数据复制到您当前数据存储目录的 \"/users/%s\" 目录中,  并在复制完成后点击\"继续\"以完成数据迁移。如果您不想迁移数据, 可直接点击\"继续\"以使用新用户数据目录。</string>
     <string name="str_cm_abxy_A">A</string>
     <string name="str_cm_abxy_B">B</string>
     <string name="str_cm_abxy_X">X</string>
@@ -55,25 +55,25 @@
     <string name="str_err_badrom">您尝试打开的并不是有效的游戏ROM。</string>
     <string name="str_err_encrom">"这个版本的ROM是加密的, 加密的ROM只能用转储自您NDS设备的任天堂ARM7 BIOS来加载。
 关于任天堂ARM7 BIOS以及如何解密ROM, 请您参考 drastic-ds.com 上的常见问题解答。
-若尝试加载DSiWare或DSi专用ROM时看到这条消息, 那么您可以直接使用隔壁melonDS模拟器, 因为DraStic不支持DSi模拟。"</string>
-    <string name="str_err_install">DraStic无法创建运转所需的文件, 请您重装应用程序</string>
-    <string name="str_err_jniload">DraStic无法初始化。请您尝试重新下载。</string>
-    <string name="str_err_lowmem">"内存不足, DraStic将会意外关闭。
-DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打开DraStic时, 点击'继续'即可继续游戏。"</string>
-    <string name="str_err_lowmem_zip">"内存不足, DraStic将会意外关闭。
+若尝试加载DSiWare或DSi专用ROM时看到这条消息, 那么您可以直接使用隔壁melonDS模拟器, 因为AzuriDS不支持DSi模拟。"</string>
+    <string name="str_err_install">AzuriDS无法创建运转所需的文件, 请您重装应用程序</string>
+    <string name="str_err_jniload">AzuriDS无法初始化。请您尝试重新下载。</string>
+    <string name="str_err_lowmem">"内存不足, AzuriDS将会意外关闭。
+AzuriDS正在努力生成一个恢复存档。若成功的话, 您在下次打开AzuriDS时, 点击'继续'即可继续游戏。"</string>
+    <string name="str_err_lowmem_zip">"内存不足, AzuriDS将会意外关闭。
 请解压游戏, 使用zip压缩包进行游戏会占用更多内存。
-DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打开DraStic时, 点击'继续'即可继续游戏。"</string>
-    <string name="str_err_nomount">DraStic无法创建存档文件夹。如果您的设备正通过USB连接到PC/Mac, 请断开连接并重启DraStic。</string>
+AzuriDS正在努力生成一个恢复存档。若成功的话, 您在下次打开AzuriDS时, 点击'继续'即可继续游戏。"</string>
+    <string name="str_err_nomount">AzuriDS无法创建存档文件夹。如果您的设备正通过USB连接到PC/Mac, 请断开连接并重启AzuriDS。</string>
     <string name="str_err_norumble_controller">当前选定的控制器没有振动功能。如果确定该控制器有振动马达但仍然不可用, 这可能是安卓系统Bug导致的, 目前Google官方没有提供解决方案(未来可能也不会提供)</string>
     <string name="str_err_norumble_internal">当前设备并未内置振动马达，振动功能无法按预期工作。</string>
     <string name="str_err_nospace">游戏无法读取，请释放一些内存。</string>
-    <string name="str_err_reload">"DraStic在后台运行时被关闭, 故导致应用重启。
+    <string name="str_err_reload">"AzuriDS在后台运行时被关闭, 故导致应用重启。
 您可以点击'继续'来继续游戏"</string>
-    <string name="str_err_reload_auto">"DraStic在后台运行时被关闭了, 故导致应用重启。
+    <string name="str_err_reload_auto">"AzuriDS在后台运行时被关闭了, 故导致应用重启。
 若出现以上情况，开启后台时自动保存选项即可保留您的进度。
 现在开启吗?"</string>
     <string name="str_err_romgeneral">读取游戏时出错了</string>
-    <string name="str_err_rootpath">DraStic 无法获取数据存储目录，请您重启应用程序</string>
+    <string name="str_err_rootpath">AzuriDS 无法获取数据存储目录，请您重启应用程序</string>
     <string name="str_gm_changegame">切换游戏</string>
     <string name="str_gm_cheats">金手指</string>
     <string name="str_gm_cheats_add">添加金手指</string>
@@ -114,7 +114,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_hm_changelog">更新日志</string>
     <string name="str_hm_faq">常见问题</string>
     <string name="str_hm_instructions">介绍</string>
-    <string name="str_bt_perm">DraStic 将通过蓝牙权限以列出已知设备的名称</string>
+    <string name="str_bt_perm">AzuriDS 将通过蓝牙权限以列出已知设备的名称</string>
     <string name="str_bt_noperm">蓝牙设备名称将不可用</string>
     <string name="str_donot_showagain">不再显示</string>
     <string name="str_menu_close">关闭</string>
@@ -129,7 +129,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_menu_pause">游戏菜单</string>
     <string name="str_menu_reset_confirm">"重置游戏吗?
 未保存的进度将会消失。"</string>
-    <string name="str_menu_rootmoved">"DraStic'中的数据直接移动到:"</string>
+    <string name="str_menu_rootmoved">"AzuriDS'中的数据直接移动到:"</string>
     <string name="str_menu_saving_busy">正在保存</string>
     <string name="str_menu_shortcut">在桌面建立快捷方式吗？</string>
     <string name="str_menu_shortcut_err">无法打开快捷方式</string>
@@ -139,10 +139,10 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_menu_add_saf_dir">添加指定的存储路径</string>
     <string name="str_menu_add_path">添加文件夹路径</string>
     <string name="str_menu_open_saf_file">添加指定路径的文件</string>
-    <string name="str_perm_mic_rationale">DraStic 需要麦克风权限以便于部分 ROM 使用麦克风。该权限不是必须的，但未授权会导致部分游戏无法使用麦克风功能。</string>
+    <string name="str_perm_mic_rationale">AzuriDS 需要麦克风权限以便于部分 ROM 使用麦克风。该权限不是必须的，但未授权会导致部分游戏无法使用麦克风功能。</string>
     <string name="str_perm_mic_warn">针对游戏的实体麦克风支持已禁用。你可以在设置中重新启用。</string>
-    <string name="str_perm_stor_error">DraStic 需要存储权限以访问外置数据存储目录</string>
-    <string name="str_perm_stor_rationale">DraStic 需要访问外部存储器以加载 ROM 并保存存档数据。若未授权此权限，应用程序无法继续使用。</string>
+    <string name="str_perm_stor_error">AzuriDS 需要存储权限以访问外置数据存储目录</string>
+    <string name="str_perm_stor_rationale">AzuriDS 需要访问外部存储器以加载 ROM 并保存存档数据。若未授权此权限，应用程序无法继续使用。</string>
     <string name="str_rom_continue">读取最近的即时存档</string>
     <string name="str_rom_loadstate">读取其他即时存档</string>
     <string name="str_rom_newgame">开始游戏</string>
@@ -275,7 +275,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_set_overwrite">覆盖即时存档需要确认</string>
     <string name="str_set_preload">启用预加载未压缩的游戏到内存</string>
     <string name="str_set_rawsavformat">使用原始 .sav 存档格式(无尾部信息)</string>
-    <string name="str_set_restart_req">重启DraStic以使变更生效</string>
+    <string name="str_set_restart_req">重启AzuriDS以使变更生效</string>
     <string name="str_set_rtc_system_time">强制系统时间作为实时时钟</string>
     <string name="str_set_rumble_dev">振动设备</string>
     <string name="str_set_rumble_dev_title">选择振动设备</string>
@@ -296,7 +296,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_set_threaded">多线程3D渲染</string>
     <string name="str_set_threaded_hint">"多线程3D渲染可以在大型3D游戏中大幅提升模拟效果, 但是在某些游戏中可能会导致图像故障。
 如果出现故障，请关闭此项。
-需重启 DraStic 以使更改设置生效。"</string>
+需重启 AzuriDS 以使更改设置生效。"</string>
     <string name="str_set_threaded_warn">这个选项仍在实验中，可能会造成一些问题。</string>
     <string name="str_set_touchthrough">按键操作同时触发DS触屏操作</string>
     <string name="str_set_volume_value">音量</string>
@@ -308,7 +308,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_set_pending_def_int">(等待重启) 内置默认路径</string>
     <string name="str_set_pending">(等待重启)\u0020</string>
     <string name="str_set_sysdir_resel">重新选择</string>
-    <string name="str_set_sysdir_notempty">此目录看起来不像是 DraStic 文件夹，且为非空文件夹。你想继续使用该文件夹、创建一个 DraStic 子文件夹，还是重新选择另一个文件夹?</string>
+    <string name="str_set_sysdir_notempty">此目录看起来不像是 AzuriDS 文件夹，且为非空文件夹。你想继续使用该文件夹、创建一个 AzuriDS 子文件夹，还是重新选择另一个文件夹?</string>
     <string name="str_set_sysdir_useit">直接使用</string>
     <string name="str_set_sysdir_subfolder">使用子文件夹</string>
     <string name="str_set_debug_notsupported">不受支持</string>
@@ -322,34 +322,34 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_set_sysdir_already">数据存储目录已经为\u0020</string>
     <string name="str_set_sysdir_unusable">该路径不可用</string>
     <string name="str_set_sysdir_unusable_alt">该路径不可用于数据存储目录</string>
-    <string name="str_set_sysdir_requireperm">DraStic 需要存储权限以创建外置数据存储目录, 请授予权限或手动选择一个外置数据存储目录</string>
+    <string name="str_set_sysdir_requireperm">AzuriDS 需要存储权限以创建外置数据存储目录, 请授予权限或手动选择一个外置数据存储目录</string>
     <string name="str_set_sysdir_grantperm">授予权限</string>
     <string name="str_set_sysdir_selext">选择外置目录</string>
-    <string name="str_set_sysdir_resel_tip">DraStic 无法访问当前设置的数据存储目录, 重新选择?</string>
-    <string name="str_set_sysdir_int_tip">请选择 \"内置默认文件夹\" 选项, 因为在 \"文件管理\" 应用中直接选择 DraStic 的内置默认文件夹是不受支持的!</string>
-    <string name="str_set_sysdir_reset" formatted="false">DraStic 无法访问数据存储目录, 将会由 %s 重置为 %s</string>
-    <string name="str_set_sysdir_kitkat_reset" formatted="false">DraStic 在安卓4.4.x版本无法使用自定义数据存储目录, 将会由 %s 重置为 %s</string>
+    <string name="str_set_sysdir_resel_tip">AzuriDS 无法访问当前设置的数据存储目录, 重新选择?</string>
+    <string name="str_set_sysdir_int_tip">请选择 \"内置默认文件夹\" 选项, 因为在 \"文件管理\" 应用中直接选择 AzuriDS 的内置默认文件夹是不受支持的!</string>
+    <string name="str_set_sysdir_reset" formatted="false">AzuriDS 无法访问数据存储目录, 将会由 %s 重置为 %s</string>
+    <string name="str_set_sysdir_kitkat_reset" formatted="false">AzuriDS 在安卓4.4.x版本无法使用自定义数据存储目录, 将会由 %s 重置为 %s</string>
     <string name="str_set_sysdir_migration">数据迁移</string>
-    <string name="str_set_sysdir_copytonew">DraStic 将会复制所有数据文件到新数据存储目录</string>
+    <string name="str_set_sysdir_copytonew">AzuriDS 将会复制所有数据文件到新数据存储目录</string>
     <string name="str_set_sysdir_exist">已存在数据文件</string>
-    <string name="str_set_sysdir_keep_or_overwrite">新数据存储目录中似乎已存在 DraStic 数据文件。现在是要迁移旧数据文件到新目录并覆盖相同文件, 还是要保留新目录中的数据文件并直接使用此目录? (若选择保留, 则 DraStic 将显示载入画面直到资源释放操作完成, 请耐心等待!)</string>
+    <string name="str_set_sysdir_keep_or_overwrite">新数据存储目录中似乎已存在 AzuriDS 数据文件。现在是要迁移旧数据文件到新目录并覆盖相同文件, 还是要保留新目录中的数据文件并直接使用此目录? (若选择保留, 则 AzuriDS 将显示载入画面直到资源释放操作完成, 请耐心等待!)</string>
     <string name="str_set_sysdir_overwrite">覆盖</string>
     <string name="str_set_keep">保留</string>
     <string name="str_set_sysdir_inaccessible">新数据存储目录无法访问, 将使用旧目录!</string>
     <string name="str_set_sysdir_cpdatafail">无法复制数据到新数据存储目录, 请重启应用程序!</string>
     <string name="str_set_sysdir_missing">找不到数据存储目录且无法创建该目录!</string>
-    <string name="str_set_sysdir_tipext">由于安卓系统更新, 此前设定的 DraStic 数据存储目录已不可用需要重新设定。现在要选择新数据存储目录还是使用外置默认路径?</string>
-    <string name="str_set_sysdir_tipint">由于安卓系统更新, 此前设定的 DraStic 数据存储目录已不可用需要重新设定。现在要选择新数据存储目录还是使用内置默认路径?</string>
+    <string name="str_set_sysdir_tipext">由于安卓系统更新, 此前设定的 AzuriDS 数据存储目录已不可用需要重新设定。现在要选择新数据存储目录还是使用外置默认路径?</string>
+    <string name="str_set_sysdir_tipint">由于安卓系统更新, 此前设定的 AzuriDS 数据存储目录已不可用需要重新设定。现在要选择新数据存储目录还是使用内置默认路径?</string>
     <string name="str_romsel_remove">移除</string>
     <string name="str_romsel_remove_tip">要从列表中移除该文件夹路径?</string>
     <string name="str_romsel_list_full">添加的游戏文件夹路径已达上限! 请在添加新路径之前移除一个旧的!</string>
     <string name="str_romsel_shortcut_tip">不支持创建快捷方式</string>
     <string name="str_romsel_scoped_unusable">很抱歉, 此设备不支持 Scoped Storage 功能。请联系设备制造商以实现 Intent.ACTION_OPEN_DOCUMENT_TREE 功能!</string>
     <string name="str_romsel_scoped_unusable_alt">很抱歉, 此设备不支持 Scoped Storage 功能。请联系设备制造商以实现 Intent.ACTION_OPEN_DOCUMENT 功能!</string>
-    <string name="str_romsel_dirdel_warn">该文件夹内有游戏正在运行, 请运行不在该文件夹中的游戏或重启 DraStic 以移除该文件夹。</string>
-    <string name="str_romsel_perm_warn">DraStic 需要外置存储权限以添加游戏文件夹。或者您可以选择\"添加指定的存储路径\"则无需该权限。</string>
-    <string name="str_romsel_dir_missing">此文件夹已不存在或 DraStic 已无权访问。需要重新选择一个文件夹吗?</string>
-    <string name="str_romsel_perm_warn_alt">DraStic 需要外置存储权限以访问该游戏文件夹。</string>
+    <string name="str_romsel_dirdel_warn">该文件夹内有游戏正在运行, 请运行不在该文件夹中的游戏或重启 AzuriDS 以移除该文件夹。</string>
+    <string name="str_romsel_perm_warn">AzuriDS 需要外置存储权限以添加游戏文件夹。或者您可以选择\"添加指定的存储路径\"则无需该权限。</string>
+    <string name="str_romsel_dir_missing">此文件夹已不存在或 AzuriDS 已无权访问。需要重新选择一个文件夹吗?</string>
+    <string name="str_romsel_perm_warn_alt">AzuriDS 需要外置存储权限以访问该游戏文件夹。</string>
     <string name="str_romsel_dir_missing_alt">此文件夹已不存在。需要重新选择一个文件夹吗?</string>
     <string name="str_romsel_androidq_warn">该文件夹在安卓10以上版本已不可用, 请移除并重新选择。</string>
     <string name="str_romsel_dup">该目录已添加</string>
@@ -364,7 +364,7 @@ DraStic正在努力生成一个恢复存档。若成功的话, 您在下次打�
     <string name="str_fpick_useit">使用该文件夹</string>
     <string name="str_adduser_title">请稍候...</string>
     <string name="str_adduser_tip">正在初始化用户数据文件夹...</string>
-    <string name="str_androidq_tip">Android 10以上系统, DraStic 将需要使用应用内置的 appdata 文件夹来保存数据; 该文件夹可被系统自带的文件管理APP访问(部分厂商定制系统的文件管理APP可能存在限制无法访问); 现在您可以选择使用指定的数据文件夹，也可以稍后在\"选项->常规\"中自行指定</string>
+    <string name="str_androidq_tip">Android 10以上系统, AzuriDS 将需要使用应用内置的 appdata 文件夹来保存数据; 该文件夹可被系统自带的文件管理APP访问(部分厂商定制系统的文件管理APP可能存在限制无法访问); 现在您可以选择使用指定的数据文件夹，也可以稍后在\"选项->常规\"中自行指定</string>
     <string name="str_sm_back">返回游戏</string>
     <string name="str_sm_bioserror">该存档不兼容, 这是存档使用的BIOS文件与当前使用的不同导致</string>
     <string name="str_sm_copy">复制</string>

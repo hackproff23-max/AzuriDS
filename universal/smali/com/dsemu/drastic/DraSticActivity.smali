@@ -96,7 +96,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "content://com.android.externalstorage.documents/tree/primary%3ADraStic"
+    const-string v0, "content://com.android.externalstorage.documents/tree/primary%3AAzuriDS"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -246,7 +246,7 @@
 
     invoke-static {p0, p3, p4}, Lcom/dsemu/drastic/filesystem/c;->o(Landroid/content/Context;Landroid/net/Uri;I)V
 
-    const-string p3, "DraStic"
+    const-string p3, "AzuriDS"
 
     invoke-interface {p1, p3}, Lcom/dsemu/drastic/filesystem/b;->u(Ljava/lang/String;)Lcom/dsemu/drastic/filesystem/b;
 

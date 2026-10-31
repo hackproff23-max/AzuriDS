@@ -1,8 +1,8 @@
 
-<c1>Emulator de Nintendo DS DraStic
+<c1>Emulator de Nintendo DS AzuriDS
 <c2>~ A tiempos drásticos, medidas drásticas ~
 
-DraStic es un emulador veloz de Nintendo DS para Android. Además de ser capaz de jugar títulos de Nintendo DS a velocidad máxima en muchos dispositivos con Android, cuenta con las siguientes funcionalidades:
+AzuriDS es un emulador veloz de Nintendo DS para Android. Además de ser capaz de jugar títulos de Nintendo DS a velocidad máxima en muchos dispositivos con Android, cuenta con las siguientes funcionalidades:
 
 - Personalizazr la ubicación y el tamaño de las pantallas de la DS, para los modos vertical y horizontal
 - Soporta plenamente controladores añadidos, y controles físicos en dispositivos cono NVidia Shield y Xperia Play
@@ -14,7 +14,7 @@ DraStic es un emulador veloz de Nintendo DS para Android. Además de ser capaz d
 --------------------------
 <t2>Descargo de responsabilidad
 --------------------------
-DraStic está diseñado con la intención de jugar, de manera privada, copias de seguridad de títulos legalmente adquiridos de Nintendo DS.
+AzuriDS está diseñado con la intención de jugar, de manera privada, copias de seguridad de títulos legalmente adquiridos de Nintendo DS.
 Este producto no está afiliado con o respaldado por Nintendo de ninguna manera.
 
 

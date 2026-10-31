@@ -5742,7 +5742,7 @@
 
     const-string v0, "_FirmwareNick"
 
-    const-string v10, "Dr Drastic"
+    const-string v10, "AzuriDS"
 
     invoke-interface {v2, v0, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

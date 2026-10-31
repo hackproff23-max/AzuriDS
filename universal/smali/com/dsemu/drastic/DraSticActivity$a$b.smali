@@ -81,7 +81,7 @@
 
     iget-object v3, v3, Lcom/dsemu/drastic/DraSticActivity$a;->e:Lcom/dsemu/drastic/DraSticActivity;
 
-    const-string v4, "com.dsemu.drastic-main-shortcut"
+    const-string v4, "org.azuri.ds-main-shortcut"
 
     invoke-direct {v0, v3, v4}, Landroid/content/pm/ShortcutInfo$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 

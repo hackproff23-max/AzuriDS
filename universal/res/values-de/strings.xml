@@ -81,23 +81,23 @@ Auf diesem Gerät sollte die Audio-Latenz nicht auf Niedrig oder Mittel gestellt
 Versuche die .nds-Datei daraus zu enpacken und lade diese direkt."</string>
     <string name="str_err_badrom">Die gewünschte Datei ist keine gültige ROM-Datei. Evtl. ist die Datei fehlerhaft.</string>
     <string name="str_err_encrom">Diese Version des ROMs ist verschlüsselt. Verschlüsselte ROMs können nur geladen werden, wenn ein originales Nintendo DS ARM7 BIOS, das von deinem DS gedumpt wurde, verwendet wird.</string>
-    <string name="str_err_install">"DraStic konnte nicht auf folgenden Pfad schreiben
+    <string name="str_err_install">"AzuriDS konnte nicht auf folgenden Pfad schreiben
 $path$ .
 Bitte überprüfe den freien internen Speicher und stelle sicher, dass für den Pfad Schreibrechte vorliegen.
 Versuche auch das Gerät neuzustarten."</string>
-    <string name="str_err_jniload">DraStic konnte nicht initialisiert werden. Bitte installiere die App erneut.</string>
-    <string name="str_err_lowmem">Es ist nur wenig RAM verfügbar, DraStic könnte unerwartet beendet werden.</string>
-    <string name="str_err_lowmem_zip">"Es ist nur wenig RAM verfügbar, DraStic könnte unerwartet beendet werden.
+    <string name="str_err_jniload">AzuriDS konnte nicht initialisiert werden. Bitte installiere die App erneut.</string>
+    <string name="str_err_lowmem">Es ist nur wenig RAM verfügbar, AzuriDS könnte unerwartet beendet werden.</string>
+    <string name="str_err_lowmem_zip">"Es ist nur wenig RAM verfügbar, AzuriDS könnte unerwartet beendet werden.
 Versuche das Spiel zu entpacken, da das Laden von gepackten Spielen mehr RAM benötigt."</string>
-    <string name="str_err_nomount">DraStic kann den Daten-Ordner nicht erstellen. Falls das Gerät mit einem PC oder MAC über USB verbunden ist, trenne bitte die Verbindung und starte Gerät und App neu.</string>
+    <string name="str_err_nomount">AzuriDS kann den Daten-Ordner nicht erstellen. Falls das Gerät mit einem PC oder MAC über USB verbunden ist, trenne bitte die Verbindung und starte Gerät und App neu.</string>
     <string name="str_err_nospace">Das Spiel konnte nicht geladen werden. Bitte bereinige den internen Speicher.</string>
-    <string name="str_err_reload">"DraStic wurde beendet während die App im Hintergrund lief und musste neu gestartet werden.
+    <string name="str_err_reload">"AzuriDS wurde beendet während die App im Hintergrund lief und musste neu gestartet werden.
 Drücke 'Spiel fortsetzen' um weiterzuspielen."</string>
-    <string name="str_err_reload_auto">"DraStic wurde beendet während die App im Hintergrund lief und musste neu gestartet werden.
+    <string name="str_err_reload_auto">"AzuriDS wurde beendet während die App im Hintergrund lief und musste neu gestartet werden.
 Um in so einem Fall das Spiel fortsetzen zu können, aktiviere bitte Auto-Speichern Pause/Suspend.
 Soll die Einstellunge jetzt aktiviert werden?"</string>
     <string name="str_err_romgeneral">Bei dem Versuch das Spiel zu Laden ist ein Fehler aufgetreten</string>
-    <string name="str_err_rootpath">DraStic konnte nicht auf den Daten-Ordner zugreifen. Bitte starte die App neu.</string>
+    <string name="str_err_rootpath">AzuriDS konnte nicht auf den Daten-Ordner zugreifen. Bitte starte die App neu.</string>
     <string name="str_gm_changegame">Spiel wechseln</string>
     <string name="str_gm_cheats">Cheats</string>
     <string name="str_gm_cheats_add">Cheat hinzufügen</string>
@@ -148,7 +148,7 @@ Wähle 'Nein' um ein neues Spiel zu starten."</string>
     <string name="str_menu_no">Nein</string>
     <string name="str_menu_pause">Spiel-Menü</string>
     <string name="str_menu_reset_confirm">Spiel zurücksetzen?</string>
-    <string name="str_menu_rootmoved">DraStics Daten-Ordner wurde aktualisiert:</string>
+    <string name="str_menu_rootmoved">AzuriDSs Daten-Ordner wurde aktualisiert:</string>
     <string name="str_menu_saving_busy">Speichervorgang wird abgeschlossen</string>
     <string name="str_menu_shortcut">Icon auf dem Desktop installieren?</string>
     <string name="str_menu_yes">Ja</string>
@@ -324,5 +324,5 @@ zurückkehren"</string>
     <string name="str_ui_setcheatscustom">Benutzerdefinierte Cheats</string>
     <string name="str_user_info">Nutzer:</string>
     <string name="str_user_title">Aktiver Nutzer:</string>
-    <string name="str_warn_activities">"Bitte deaktiviere 'Kein Aktivitäts-Log' in den Entwickleroptionen, sonst funktioniert DraStic unter Umständen nicht."</string>
+    <string name="str_warn_activities">"Bitte deaktiviere 'Kein Aktivitäts-Log' in den Entwickleroptionen, sonst funktioniert AzuriDS unter Umständen nicht."</string>
 </resources>
