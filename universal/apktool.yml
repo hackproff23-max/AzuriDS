@@ -1,0 +1,19 @@
+version: 2.9.3
+apkFileName: AzuriDS.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '33'
+packageInfo:
+  forcedPackageId: '127'
+versionInfo:
+  versionCode: '109'
+  versionName: r2.6.0.4a
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+doNotCompress:
+- resources.arsc
