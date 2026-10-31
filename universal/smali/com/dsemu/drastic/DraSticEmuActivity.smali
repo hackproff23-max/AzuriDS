@@ -1291,6 +1291,8 @@
 
     invoke-virtual {v4, p0, v6}, Lcom/dsemu/drastic/DraSticGlView;->z0(Lcom/dsemu/drastic/DraSticEmuActivity;Z)V
 
+    invoke-static {p0, v4}, Lcom/dsemu/drastic/ui/AnalogStick;->attach(Landroid/app/Activity;Lcom/dsemu/drastic/DraSticGlView;)V
+
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
