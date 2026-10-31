@@ -1,0 +1,31 @@
+name: Build AzuriDS
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Baixar apktool
+        run: curl -L -o apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar
+
+      - name: Compilar APK
+        run: java -jar apktool.jar b -o AzuriDS.apk universal
+
+      - name: Assinar APK
+        run: java -jar uber-apk-signer.jar --apks AzuriDS.apk
+
+      - name: Enviar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: AzuriDS-apk
+          path: AzuriDS-aligned-debugSigned.apk
